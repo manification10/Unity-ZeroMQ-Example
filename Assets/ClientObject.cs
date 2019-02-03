@@ -84,6 +84,23 @@ public class ClientObject : MonoBehaviour
         var z = float.Parse(splittedStrings[2]);
         transform.position = new Vector3(x, y, z);
     }
+    private void initializeLines()
+    {
+        LineRenderer head_neck = gameObject.AddComponent<LineRenderer>();
+        LineRenderer neck_r_shoulder = gameObject.AddComponent<LineRenderer>();
+        LineRenderer neck_l_shoulder = gameObject.AddComponent<LineRenderer>();
+        LineRenderer r_shoulder_r_elbow = gameObject.AddComponent<LineRenderer>();
+        LineRenderer l_shoulder_l_elbow = gameObject.AddComponent<LineRenderer>();
+        LineRenderer r_elbow_r_wrist = gameObject.AddComponent<LineRenderer>();
+        LineRenderer l_elbow_l_wrist= gameObject.AddComponent<LineRenderer>();
+        LineRenderer neck_pelvis = gameObject.AddComponent<LineRenderer>();
+        LineRenderer pelvis_r_hip = gameObject.AddComponent<LineRenderer>();
+        LineRenderer pelvis_l_hip = gameObject.AddComponent<LineRenderer>();
+        LineRenderer r_hip_r_knee = gameObject.AddComponent<LineRenderer>();
+        LineRenderer l_hip_l_knee= gameObject.AddComponent<LineRenderer>();
+        LineRenderer r_knee_r_ankle = gameObject.AddComponent<LineRenderer>();
+        LineRenderer l_knee_l_ankle= gameObject.AddComponent<LineRenderer>();
+    }
 
     private void Start()
     {
